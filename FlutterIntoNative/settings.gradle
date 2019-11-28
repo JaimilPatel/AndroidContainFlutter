@@ -1,0 +1,12 @@
+include ':app'
+rootProject.name='FlutterIntoNative'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'flutterfornative/.android/include_flutter.groovy'
+))
+include ':flutterfornative'
+project(':flutterfornative').projectDir = new File('../flutterfornative')
+
+include ':flutterfornative'
+project(':flutterfornative').projectDir = new File('../flutterfornative')
