@@ -78,15 +78,12 @@ class _FlutterUiHomePageState extends State<FlutterUiHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(32.0),
-            child : TextFormField(
-              decoration: const InputDecoration(
-                hintText: 'Enter Data to Send in Android Screen',
-                labelText: 'Enter Data',
-              ),
-              controller : textFieldController
-            )
-            ),
+                padding: const EdgeInsets.all(32.0),
+                child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Enter Data',
+                    ),
+                    controller: textFieldController)),
             RaisedButton(
                 child: Text(
                   'Send to Android Screen',
@@ -98,11 +95,23 @@ class _FlutterUiHomePageState extends State<FlutterUiHomePage> {
                 color: Colors.pink,
                 textColor: Colors.white),
             Container(
-                margin: EdgeInsets.all(10),
-                child: Text(
-                  'Data From Android: $_resultAndroidData',
-                  style: TextStyle(color: Colors.blue, fontSize: 16, fontWeight : FontWeight.bold),
-                )),
+              margin: EdgeInsets.all(10),
+              child: Text(
+                'Data From Android: $_resultAndroidData',
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Image(
+                image: AssetImage('images/flutterlogo.png'),
+                height: 80.0,
+                width: 80.0,
+              ),
+            )
           ],
         ),
       ),

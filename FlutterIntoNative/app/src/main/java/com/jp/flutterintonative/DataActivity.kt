@@ -14,6 +14,7 @@ class DataActivity : AppCompatActivity() {
         setContentView(R.layout.activity_data)
         btnToSend.setOnClickListener {
             val inputData = etData.text.toString()
+            etData.setText("")
             sendToFlutterModule(inputData)
         }
 
