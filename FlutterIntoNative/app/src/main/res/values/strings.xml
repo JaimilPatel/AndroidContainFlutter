@@ -2,4 +2,5 @@
     <string name="app_name">FlutterIntoNative</string>
     <string name="str_enter_data_to_send_in_flutter_module">Enter Data to Send in Flutter module</string>
     <string name="str_send">Send</string>
+    <string name="str_send_to_flutter_module">Send to Flutter Module</string>
 </resources>

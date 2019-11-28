@@ -79,29 +79,30 @@ class _FlutterUiHomePageState extends State<FlutterUiHomePage> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(32.0),
-              child: TextField(
-                controller: textFieldController,
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.black,
-                ),
+            child : TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Enter Data to Send in Android Screen',
+                labelText: 'Enter Data',
               ),
+              controller : textFieldController
+            )
             ),
             RaisedButton(
-              child: Text(
-                'Send to Android Screen',
-                style: TextStyle(fontSize: 24),
-              ),
-              onPressed: () {
-                _sendResultsToAndroidiOS();
-              },
-            ),
+                child: Text(
+                  'Send to Android Screen',
+                  style: TextStyle(fontSize: 24),
+                ),
+                onPressed: () {
+                  _sendResultsToAndroidiOS();
+                },
+                color: Colors.pink,
+                textColor: Colors.white),
             Container(
                 margin: EdgeInsets.all(10),
                 child: Text(
-                  'Result: $_resultAndroidData',
-                  style: TextStyle(color: Colors.blue, fontSize: 16),
-                ))
+                  'Data From Android: $_resultAndroidData',
+                  style: TextStyle(color: Colors.blue, fontSize: 16, fontWeight : FontWeight.bold),
+                )),
           ],
         ),
       ),
